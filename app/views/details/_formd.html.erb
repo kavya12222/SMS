@@ -1,0 +1,47 @@
+<% if @detail.errors.any? %>
+  <h2> The following errors prevented the article from being saved</h2>
+  <ul>
+    <% @detail.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with(model: @detail, local: true) do |f| %>
+  <p>
+    <%= f.label :Name%><br/>
+    <%= f.text_field :Name %>
+  </p>
+
+  <p>
+    <%=f.label :Dob %><br/>
+    <%=f.text_field :Dob %>
+  </p>
+
+  <p>
+    <%=f.label :Blood_group %><br/>
+    <%=f.text_field :Blood_group %>
+  </p>
+  <p>
+    <%=f.label :Fathers_name %><br/>
+    <%=f.text_field :Fathers_name%>
+  </p>
+
+  <p>
+    <%=f.label :Parent_address%><br/>
+    <%=f.text_field :Parent_address%>
+  </p>
+
+  <p>
+    <%=f.label :Phone_number%><br/>
+    <%=f.text_field :Phone_number %>
+  </p>
+
+  <p>
+    <%=f.label :Achievement%><br/>
+    <%=f.text_field :Achievement %>
+  </p>
+  <p>
+    <%=f.submit %>
+  </p>
+<% end %>

@@ -1,0 +1,17 @@
+<h1>Teacher listing page</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Email</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @teachers.each do|teacher| %>
+    <tr>
+      <td><%= teacher.email %></td>
+
+    </tr>
+  <% end %>
+  </tbody>
+</table>

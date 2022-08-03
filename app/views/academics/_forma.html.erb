@@ -1,0 +1,47 @@
+<% if @academic.errors.any? %>
+  <h2> The following errors prevented the article from being saved</h2>
+  <ul>
+    <% @academic.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with(model: @academic, local: true) do |f| %>
+  <p>
+    <%= f.label :Attendance%><br/>
+    <%= f.text_field :Attendance %>
+  </p>
+
+  <p>
+    <%=f.label :Midterm_marks %><br/>
+    <%=f.text_field :Midterm_marks %>
+  </p>
+
+  <p>
+    <%=f.label :Midterm_percentage %><br/>
+    <%=f.text_field :Midterm_percentage%>
+  </p>
+  <p>
+    <%=f.label :Annual_marks %><br/>
+    <%=f.text_field :Annual_marks%>
+  </p>
+
+  <p>
+    <%=f.label :Annual_percentage %><br/>
+    <%=f.text_field :Annual_percentage%>
+  </p>
+
+  <p>
+    <%=f.label :Fee_details %><br/>
+    <%=f.text_field :Fee_details %>
+  </p>
+
+  <p>
+    <%=f.label :Remark %><br/>
+    <%=f.text_field :Remark %>
+  </p>
+  <p>
+    <%=f.submit %>
+  </p>
+<% end %>

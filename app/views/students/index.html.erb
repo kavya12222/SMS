@@ -1,0 +1,21 @@
+<h1>Student listing page</h1>
+<table>
+  <thead>
+  <tr>
+    <th colspan="1">Name</th>
+    <th>Email</th>
+    <th colspan="3">Action</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @students.each do|student| %>
+    <tr>
+      <td><%= student.detail.Name %></td>
+      <td><%= student.email %></td>
+      <td><%= link_to 'show', student_path(student) %></td>
+<!--      <td> <%#=button_to 'delete', student, method: :delete, data: {confirm: "Are you sure?" }%> </td>-->
+    </tr>
+  <% end %>
+  </tbody>
+</table>

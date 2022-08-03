@@ -1,0 +1,110 @@
+<h1>Student details page</h1>
+<table>
+  <tbody>
+  <tr>
+    <h3><b>Details</b></h3>
+    <th>Name:</th>
+    <td><%= @student.detail.Name %></td>
+  </tr>
+  <tr>
+    <th>Dob:</th>
+    <td><%= @student.detail.Dob %></td>
+  </tr>
+  <tr>
+    <th>Blood_group:</th>
+    <td><%= @student.detail.Blood_group %></td>
+  </tr>
+  <tr>
+    <th>Fathers_name:</th>
+    <td><%= @student.detail.Fathers_name %></td>
+  </tr>
+  <tr>
+    <th>Parent_address:</th>
+    <td><%= @student.detail.Parent_address %></td>
+  </tr>
+  <tr>
+    <th>Phone_number:</th>
+    <td><%= @student.detail.Phone_number%></td>
+  </tr>
+  <tr>
+    <th>Achievement:</th>
+    <td><%= @student.detail.Achievement%></td>
+  </tr>
+  </tbody>
+</table>
+<% if admin_signed_in? or student_signed_in? %>
+<td> <%= link_to 'Edit', edit_detail_path(@student.detail.id) %> </td>
+  <% end %>
+
+<p>
+  <br/>
+</p>
+
+<table>
+  <tbody>
+  <tr>
+    <h3><b>Academics</b></h3>
+    <th>Attendance:</th>
+    <td><%= @student.academic.Attendance %></td>
+  </tr>
+  <tr>
+    <th>Midterm_marks:</th>
+    <td><%= @student.academic.Midterm_marks %></td>
+  </tr>
+  <tr>
+    <th>Midterm_percentage:</th>
+    <td><%= @student.academic.Midterm_percentage %></td>
+  </tr>
+  <tr>
+    <th>Annual_marks:</th>
+    <td><%= @student.academic.Annual_marks %></td>
+  </tr>
+  <tr>
+    <th>Annual_percentage:</th>
+    <td><%= @student.academic.Annual_percentage %></td>
+  </tr>
+  <tr>
+    <th>Fee_details:</th>
+    <td><%= @student.academic.Fee_details%></td>
+  </tr>
+  <tr>
+    <th>Remark:</th>
+    <td><%= @student.academic.Remark%></td>
+  </tr>
+  </tbody>
+</table>
+<% if teacher_signed_in? or admin_signed_in? %>
+<td> <%= link_to 'Edit', edit_academic_path(@student.academic.id)%> </td>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
