@@ -1,11 +1,7 @@
 class AcademicsController < ApplicationController
 
   def edit
-    # if admin_signed_in? or teacher_signed_in?
     @academic = Academic.find(params[:id])
-    # else
-    #   redirect_to admin_session_path
-    #   end
   end
 
   def update

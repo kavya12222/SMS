@@ -1,6 +1,6 @@
 <h1 style="text-align: center">School Management System</h1>
 <% unless admin_signed_in? or teacher_signed_in? or student_signed_in? %>
-  <%= button_to "Admin",new_admin_session_path %></br>
+  <%= button_to "Admin", new_admin_session_path %></br>
   <%= button_to "Teacher",new_teacher_session_path %></br>
   <%= button_to "Student",new_student_session_path %>
 <%end %>
@@ -10,8 +10,8 @@
   <%= link_to 'student_list',students_path %> |
   <%= link_to 'Teacher list',teachers_path %> <br/>
   <p>
-  <%= button_to 'Create new student record', new_student_registration_path %></br>
-  <%= button_to 'Create new Teacher record', new_teacher_registration_path %>
+  <%=link_to 'Create new student record', new_student_registration_path %></br>
+  <%=link_to'Create new Teacher record', new_teacher_registration_path %>
   </p>
   <%= button_to "logout", destroy_admin_session_path, method: :delete %>
 <%end %>

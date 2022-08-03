@@ -1,4 +1,4 @@
-<h1>Student listing page</h1>
+<h1 style="text-align: center">Student listing page</h1>
 <table>
   <thead>
   <tr>
@@ -14,8 +14,11 @@
       <td><%= student.detail.Name %></td>
       <td><%= student.email %></td>
       <td><%= link_to 'show', student_path(student) %></td>
-<!--      <td> <%#=button_to 'delete', student, method: :delete, data: {confirm: "Are you sure?" }%> </td>-->
+      <% if admin_signed_in? %>
+      <td> <%=button_to 'delete', student, method: :delete, data: {confirm: "Are you sure?" }%> </td>
+      <% end %>
     </tr>
   <% end %>
   </tbody>
 </table>
+

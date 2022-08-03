@@ -1,11 +1,7 @@
 class DetailsController < ApplicationController
 
   def edit
-    # if admin_signed_in? or student_signed_in?
     @detail = Detail.find(params[:id])
-    # else
-    #   redirect_to admin_session_path
-    # end
   end
 
   def update
